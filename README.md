@@ -6,7 +6,7 @@ O comportamento indefinido existe devido ao momento no qual a linguagem C nasce.
 
 ## Vantagens
 
-A principal vantagem é as possíveis **otimizações** que podem ser feitas. Por exemplo, se o C definisse `INT32_MAX + 1` como uma operação proibida, uma conta simples para inteiros i e j como `i = j + 10` **sempre** verificaria se `j = INT32_MAX - 10 + 1`.
+A principal vantagem são as possíveis **otimizações** que podem ser feitas. Por exemplo, se o C definisse `INT32_MAX + 1` como uma operação proibida, uma conta simples para inteiros i e j como `i = j + 10` **sempre** verificaria se `j = INT32_MAX - 10 + 1`.
 
 Outro exemplo está no código a seguir:
 
