@@ -2,11 +2,11 @@
 
 Um **comportamento indefinido** é quele cujo o *standard* não **impõem** nada sobre seu resultado. Note que é diferente de dizer que o *standard* impões um resultado entre alguns especificados.
 
-O comportamento indefinido existe devido ao momento no qual a linguagem C nasce. Naquela época, existia uma diferença gigantesca entre modelos de computadores e no modo com que eles definiam certas operações, regras e **falhas**. E principalmente como tornar o código seguro tinha seus pontos negativos mais acentuados, defino a performance dos computadores em geral (Veja [Vantagens](#vantagens)).
+O comportamento indefinido existe devido ao momento no qual a linguagem C nasce. Naquela época, existia uma diferença gigantesca entre modelos de computadores e no modo com que eles definiam certas operações, regras e **falhas**. E principalmente como tornar o código seguro tinha seus pontos negativos mais acentuados, devido a performance dos computadores em geral (Veja [Vantagens](#vantagens)).
 
 ## Vantagens
 
-A principal vantagem são as possíveis **otimizações** que podem ser feitas. Por exemplo, se o C definisse `INT32_MAX + 1` como uma operação proibida, uma conta simples para inteiros i e j como `i = j + 10` **sempre** verificaria se `j = INT32_MAX - 10 + 1`.
+A principal vantagem são as possíveis **otimizações** que podem ser feitas. Por exemplo, se a linguagem C definisse `INT32_MAX + 1` como uma operação inválida, uma conta simples para inteiros i e j como `i = j + 10` **sempre** verificaria se `j = INT32_MAX - 10 + 1`.
 
 Outro exemplo está no código a seguir:
 
@@ -24,7 +24,7 @@ int main(void)
 }
 ```
 
-O acesso `array[size]` é indefinido, e por isso o compilador não precisa verificar se para todo acesso à um array o endereço é válido.
+O acesso `array[size]` é indefinido, e por isso o compilador não precisa verificar se para todo acesso à um array em algum index é válido.
 
 ## Qual é o problema real?
 
@@ -55,4 +55,3 @@ Undefined Behavior in C++: What Every Programmer Should Know and Fear - Fedor Pi
 - [Undefined Behavior in C++: What is it, and why do you care?](https://www.youtube.com/watch?v=uHCLkb1vKaY)
 - [Undefined Behavior in C++: A Performance Viewpoint - Fedor Pikus - CppNow 2022](https://www.youtube.com/watch?v=BbMybgmQBhU)
 - [What Every C Programmer Should Know About Undefined Behavior #1/3](https://blog.llvm.org/2011/05/what-every-c-programmer-should-know.html)
-# c-undefined
